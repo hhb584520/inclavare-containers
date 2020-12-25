@@ -16,8 +16,6 @@ jobs:
         tag: [centos8.1]
     steps:
     - uses: actions/checkout@v2
-      with:
-        ref: refs/pull/${{ github.event.pull_request.number }}/merge
 
     - name: Prepare work
       run: echo "CPU_NUM=$(nproc --all)" >> $GITHUB_ENV
