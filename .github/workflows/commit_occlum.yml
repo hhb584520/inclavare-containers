@@ -9,7 +9,6 @@ on:
 
 jobs:
   rune_occlum:
-    if: ${{ contains(github.event.pull_request.labels.*.name, 'testing-before-checkin') }}
     runs-on: ${{ matrix.sgx }}
     strategy:
       matrix:
