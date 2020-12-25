@@ -2,8 +2,10 @@ name: Run rune with Occlum
 
 # Controls when the action will run. Triggers the workflow on pull request labeled testing-before-checkin.
 on:
-  pull_request_target:
-    types: labeled
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   rune_occlum:
